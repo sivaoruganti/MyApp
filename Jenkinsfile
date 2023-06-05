@@ -5,6 +5,7 @@ node{
    stage('maven-buildstage'){
 
       def mvnHome =  tool name: 'maven3', type: 'maven'   
+// Need to spicify the maven path to jenkins.
       sh "${mvnHome}/bin/mvn clean package"
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
