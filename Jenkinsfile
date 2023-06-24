@@ -24,9 +24,9 @@ node{
     sh 'docker push varadharajanr/myweb:0.0.2'
    }
    stage('Nexus Image Push'){
-    sh "docker login -u admin -p Admin*0987 54.255.162.64:8083" //Nexus IP & Port
-    sh "docker tag varadharajanr/myweb:0.0.2 54.255.162.64:8083/varadharajanr:1.0.0"
-    sh 'docker push 54.255.162.64:8083/varadharajanr:1.0.0'
+    sh "docker login -u admin -p Admin*0987 52.77.251.110:8083" //Nexus IP & Port
+    sh "docker tag varadharajanr/myweb:0.0.2 52.77.251.110:8083/varadharajanr:1.0.0"
+    sh 'docker push 52.77.251.110:8083/varadharajanr:1.0.0'
    }
    stage('Remove the previous container'){
     try{
