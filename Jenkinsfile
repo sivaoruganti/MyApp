@@ -3,6 +3,7 @@ node{
      git 'https://github.com/varadharajanravi/my-app.git'
    }
    //Need to spicify the maven path to jenkins.
+	
    stage('Maven-buildstage'){
       def mvnHome =  tool name: 'maven3', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"   //How config maven code ans is ./mvn
